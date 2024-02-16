@@ -51,6 +51,8 @@ form.addEventListener("submit", e =>{
             message:
               'Sorry, there are no images matching your search query. Please try again!',
           });
+          gallery.innerHTML ="";
+          form.reset();
         } else {
             renderImgs(data);
             const lightbox = new SimpleLightbox('.gallery a', options);
